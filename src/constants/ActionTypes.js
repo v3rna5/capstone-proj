@@ -1,0 +1,3 @@
+export const ADD_PROPERTY = "ADD_PROPERTY";
+export const UPDATE_TIME = "UPDATE_TIME";
+export const SELECT_PROPERTY = "SELECT_PROPERTY";
