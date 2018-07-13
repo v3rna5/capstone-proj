@@ -7,9 +7,9 @@ July 13, 2018. Verna Santos, Epicodus.
 
 ## Component Tree
 
-![component tree]()
+![component tree](src/assets/images/capstone_proj.png)
 
-* Added Admin route with note about specific view connection to KegList.
+* Added Admin route with note about specific view connection to CondoList.
 
 * Highlighted App to indicate connection of state.
 
@@ -40,7 +40,7 @@ _Admin_
 
 ### Part 2 Requirements
 
-- [] Add a keg to condo list.
+- [] Add a condo to condo list.
 - [] Update component tree to show state.
 - [] State is used only when necessary.
 - [] State is lifted in an efficient manner that follows best practices.
@@ -50,14 +50,14 @@ _Admin_
 **CRUD**: _Create_, Read, Update, and _Delete._
 
 - [ ] Edit a condo.
-- [ ] Delete a keg from condo list.
+- [ ] Delete a condo from condo list.
 - [] Explore Material UI in React.
 
 ## Setup Instructions
 
 Clone from GitHub.
 ```
-$ git clone 
+$ git clone
 ```
 
 Install NPM packages.
