@@ -11,6 +11,14 @@ import PropTypes from 'prop-types';
 import c from './../constants';
 
 class App extends React.Component {
+  //
+  // constructor(props) {
+  //   super(props);
+  //   this.state = {
+  //     selectedProperty: nullP
+  //   };
+  //   this.handleChangingSelectedProperty = this.handleChangingSelectedProperty.bind(this);
+  // }
 
   componentDidMount() {
     this.waitTimeUpdateTimer = setInterval(() =>
@@ -34,8 +42,18 @@ class App extends React.Component {
         formattedWaitTime: newFormattedWaitTime
       };
       dispatch(action);
+    // var newMasterPropertyList = Object.assign({}, this.state.masterPropertyList);
+    // Object.keys(newMasterPropertyList).forEach(propertyId => {
+    //   newMasterPropertyList[propertyId].formattedWaitTime = (newMasterPropertyList[propertyId].timeOpen).fromNow(true);
+    // });
+    // this.setState({masterPropertyList: newMasterPropertyList});
   });
 }
+
+  // handleChangingSelectedProperty(propertyId){
+  //   this.setState({selectedProperty: propertyId});
+  // }
+
   render(){
     return (
       <div>
