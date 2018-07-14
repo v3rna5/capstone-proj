@@ -8,9 +8,9 @@ function PropertyList(props){
       <hr/>
       {Object.keys(props.propertyList).map(function(propertyId) {
         var property = props.propertyList[propertyId];
-        return <Property names={property.names}
+        return <Property propname={property.propname}
           location={property.location}
-          issue={property.issue}
+          description={property.description}
           formattedWaitTime={property.formattedWaitTime}
           currentRouterPath={props.currentRouterPath}
           key={propertyId}

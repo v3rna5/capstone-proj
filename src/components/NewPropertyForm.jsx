@@ -5,9 +5,9 @@ import { v4 } from 'uuid';
 import c from './../constants';
 
 function NewPropertyForm(props){
-  let _names = null;
+  let _propname = null;
   let _location = null;
-  let _issue = null;
+  let _description = null;
 
   function handleNewPropertyFormSubmission(event) {
     const { dispatch } = props;
@@ -15,16 +15,16 @@ function NewPropertyForm(props){
     const action = {
       type: c.ADD_PROPERTY,
       id: v4(),
-      names: _names.value,
+      propname: _propname.value,
       location: _location.value,
-      issue: _issue.value,
+      description: _description.value,
       timeOpen: new Moment(),
       formattedWaitTime: new Moment().fromNow(true)
     };
     dispatch(action);
-    _names.value = '';
+    _propname.value = '';
     _location.value = '';
-    _issue.value = '';
+    _description.value = '';
   }
 
   return (
@@ -32,18 +32,18 @@ function NewPropertyForm(props){
       <form onSubmit={handleNewPropertyFormSubmission}>
         <input
           type='text'
-          id='names'
-          placeholder='Pair Names'
-          ref={(input) => {_names = input;}}/>
+          id='propname'
+          placeholder='Property Name'
+          ref={(input) => {_propname = input;}}/>
         <input
           type='text'
           id='location'
           placeholder='Location'
           ref={(input) => {_location = input;}}/>
         <textarea
-          id='issue'
-          placeholder='Describe your issue.'
-          ref={(textarea) => {_issue = textarea;}}/>
+          id='description'
+          placeholder='Describe your description.'
+          ref={(textarea) => {_description = textarea;}}/>
         <button type='submit'>Help!</button>
       </form>
     </div>

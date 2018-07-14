@@ -5,9 +5,9 @@ function PropertyDetail(props){
   return (
     <div>
       <hr/>
-      <h1>{props.selectedProperty.names} - {props.selectedProperty.location}</h1>
+      <h1>{props.selectedProperty.propname} - {props.selectedProperty.location}</h1>
       <h2>Submitted {props.selectedProperty.formattedWaitTime} ago</h2>
-      <h4><em>{props.selectedProperty.issue}</em></h4>
+      <h4><em>{props.selectedProperty.description}</em></h4>
       <hr/>
     </div>
   );

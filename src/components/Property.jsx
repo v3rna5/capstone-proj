@@ -17,7 +17,7 @@ function Property(props){
 
   const propertyInformation =
     <div>
-      <h3>{props.location} - {props.names}</h3>
+      <h3>{props.location} - {props.propname}</h3>
       <h4>{props.formattedWaitTime}</h4>
       <hr/>
     </div>;
@@ -37,9 +37,9 @@ function Property(props){
 }
 
 Property.propTypes = {
-  names: PropTypes.string.isRequired,
+  propname: PropTypes.string.isRequired,
   location: PropTypes.string.isRequired,
-  issue: PropTypes.string,
+  description: PropTypes.string,
   formattedWaitTime: PropTypes.string.isRequired,
   currentRouterPath: PropTypes.string,
   propertyId: PropTypes.string.isRequired
