@@ -11,14 +11,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/epicodus-lessons/react-help-queue-example.git"
+    "url": "git+https://github.com/v3rna5/capstone-proj"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/epicodus-lessons/react-help-queue-example/issues"
+    "url": "https://github.com/v3rna5/capstone-proj"
   },
-  "homepage": "https://github.com/epicodus-lessons/react-help-queue-example#readme",
+  "homepage": "https://github.com/v3rna5/capstone-proj/blob/master/README.md",
   "dependencies": {
     "moment": "^2.18.1",
     "prop-types": "^15.5.10",
