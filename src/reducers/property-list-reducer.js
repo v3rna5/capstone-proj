@@ -2,7 +2,7 @@ import c from './../constants';
 
 export default (state = {}, action) => {
   let newState;
-  const { propname, location, description, timeOpen, id, formattedWaitTime } = action;
+  const { propname, location, description, price, timeOpen, id, formattedWaitTime } = action;
 
   switch (action.type) {
     case c.ADD_PROPERTY:
@@ -11,6 +11,7 @@ export default (state = {}, action) => {
         propname: propname,
         location: location,
         description: description,
+        price: price,
         timeOpen: timeOpen,
         id: id,
         formattedWaitTime: formattedWaitTime

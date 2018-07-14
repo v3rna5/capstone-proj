@@ -40,6 +40,7 @@ Property.propTypes = {
   propname: PropTypes.string.isRequired,
   location: PropTypes.string.isRequired,
   description: PropTypes.string,
+  price: PropTypes.sring,
   formattedWaitTime: PropTypes.string.isRequired,
   currentRouterPath: PropTypes.string,
   propertyId: PropTypes.string.isRequired

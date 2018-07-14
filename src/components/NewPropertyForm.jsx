@@ -8,6 +8,7 @@ function NewPropertyForm(props){
   let _propname = null;
   let _location = null;
   let _description = null;
+  let _price = null;
 
   function handleNewPropertyFormSubmission(event) {
     const { dispatch } = props;
@@ -18,6 +19,7 @@ function NewPropertyForm(props){
       propname: _propname.value,
       location: _location.value,
       description: _description.value,
+      price: _price.value,
       timeOpen: new Moment(),
       formattedWaitTime: new Moment().fromNow(true)
     };
@@ -25,6 +27,7 @@ function NewPropertyForm(props){
     _propname.value = '';
     _location.value = '';
     _description.value = '';
+    _price.value = '';
   }
 
   return (
@@ -44,7 +47,12 @@ function NewPropertyForm(props){
           id='description'
           placeholder='Describe your description.'
           ref={(textarea) => {_description = textarea;}}/>
-        <button type='submit'>Help!</button>
+          <input
+            type='text'
+            id='price'
+            placeholder='Price'
+            ref={(input) => {_price = input;}}/>
+        <button type='submit'>Add</button>
       </form>
     </div>
   );

@@ -8,6 +8,7 @@ function PropertyDetail(props){
       <h1>{props.selectedProperty.propname} - {props.selectedProperty.location}</h1>
       <h2>Submitted {props.selectedProperty.formattedWaitTime} ago</h2>
       <h4><em>{props.selectedProperty.description}</em></h4>
+        <h4><em>{props.selectedProperty.price}</em></h4>
       <hr/>
     </div>
   );

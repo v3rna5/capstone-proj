@@ -11,6 +11,7 @@ function PropertyList(props){
         return <Property propname={property.propname}
           location={property.location}
           description={property.description}
+          price={property.price}
           formattedWaitTime={property.formattedWaitTime}
           currentRouterPath={props.currentRouterPath}
           key={propertyId}

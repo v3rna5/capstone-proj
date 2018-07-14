@@ -6,9 +6,10 @@ describe('propertyListReducer', () => {
 
   let action;
   const samplePropertyData = {
-    propname : 'Ryan & Aimen',
-    location : '4b',
-    description : 'Jest is being a diva and won\'t work with Webpack!',
+    propname : 'Viceroy',
+    location : '123 Main St',
+    description : 'It is located in the heart of Manila',
+    price: '50'
     timeOpen : 1500000000000,
     id: 0
   };
@@ -18,12 +19,13 @@ describe('propertyListReducer', () => {
   });
 
   test('Should successfully add new property data to masterPropertyList', () => {
-    const { propname, location, description, timeOpen, id } = samplePropertyData;
+    const { propname, location, description, price, timeOpen, id } = samplePropertyData;
     action = {
       type: c.ADD_PROPERTY,
       propname: propname,
       location: location,
       description: description,
+      price: price,
       timeOpen: timeOpen,
       id: id
     };
@@ -32,6 +34,7 @@ describe('propertyListReducer', () => {
         propname: propname,
         location: location,
         description: description,
+        price: price,
         timeOpen: timeOpen,
         id: id
       }
@@ -39,12 +42,13 @@ describe('propertyListReducer', () => {
   });
 
   test('New property should include Moment-formatted wait times', () => {
-    const { propname, location, description, timeOpen, id } = samplePropertyData;
+    const { propname, location, description, price, timeOpen, id } = samplePropertyData;
     action = {
       type: c.ADD_PROPERTY,
       propname: propname,
       location: location,
       description: description,
+      price: price,
       timeOpen: timeOpen,
       id: id,
       formattedWaitTime: new Moment().fromNow(true)
@@ -54,6 +58,7 @@ describe('propertyListReducer', () => {
         propname: propname,
         location: location,
         description: description,
+        price: price,
         timeOpen: timeOpen,
         id: id,
         formattedWaitTime: 'a few seconds'
@@ -62,7 +67,7 @@ describe('propertyListReducer', () => {
   });
 
   test('Should add freshly-calculated Moment-formatted wait time to property entry', () => {
-    const { propname, location, description, timeOpen, id } = samplePropertyData;
+    const { propname, location, description, price, timeOpen, id } = samplePropertyData;
     action = {
       type: c.UPDATE_TIME,
       formattedWaitTime: '4 minutes',
@@ -73,6 +78,7 @@ describe('propertyListReducer', () => {
         propname: propname,
         location: location,
         description: description,
+        price: price,
         timeOpen: timeOpen,
         id: id,
         formattedWaitTime: '4 minutes'
