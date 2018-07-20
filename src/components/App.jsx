@@ -9,6 +9,8 @@ import Admin from './Admin';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import c from './../constants';
+import NavBar from './NavBar'
+
 
 class App extends React.Component {
   //
@@ -57,8 +59,8 @@ class App extends React.Component {
   render(){
     return (
       <div>
-        <Header/>
-
+        
+        <NavBar />
         <Switch>
           <Route exact path='/' render={()=><PropertyList propertyList={this.props.masterPropertyList} />} />
           <Route path='/newproperty' render={()=><NewPropertyControl />} />
